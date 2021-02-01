@@ -2,7 +2,9 @@ import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-import {HomeScreen, ProfileScreen} from 'screens';
+import {colors} from 'themes';
+import {icons} from 'assets';
+import screens, {HomeScreen, ProfileScreen} from 'screens';
 
 export type BottomTabParamList = {
   Home: undefined;
@@ -16,20 +18,16 @@ export default function MainStackNavigator() {
     <Tab.Navigator
       screenOptions={({route}) => ({
         tabBarIcon: ({focused, color, size}) => {
-          let iconName = focused
-            ? 'ios-information-circle'
-            : 'ios-information-circle-outline';
-          if (route.name === 'Profile') {
-            iconName = focused ? 'ios-list' : 'ios-list-outline';
+          let iconName = focused ? icons.home : icons.homeOutline;
+          if (route.name === screens.profile) {
+            iconName = focused ? icons.person : icons.personOutline;
           }
-
-          // You can return any component that you like here!
           return <Ionicons name={iconName} size={size} color={color} />;
         },
       })}
       tabBarOptions={{
-        activeTintColor: 'tomato',
-        inactiveTintColor: 'gray',
+        activeTintColor: colors.black,
+        inactiveTintColor: colors.darkGray,
       }}>
       <Tab.Screen name="Home" component={HomeScreen} />
       <Tab.Screen name="Profile" component={ProfileScreen} />
