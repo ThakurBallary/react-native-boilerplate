@@ -10,6 +10,7 @@ module.exports = {
           apis: './src/apis',
           assets: './src/assets',
           components: './src/components',
+          features: './src/features',
           navigation: './src/navigation',
           screens: './src/screens',
           store: './src/store',

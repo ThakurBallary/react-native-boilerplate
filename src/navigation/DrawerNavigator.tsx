@@ -1,7 +1,7 @@
 import React from 'react';
-import {createDrawerNavigator} from '@react-navigation/drawer';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 
-import {BottomTabNavigator} from 'navigation';
+import { BottomTabNavigator } from 'navigation';
 
 export type DrawerParamList = {
   Home: undefined;

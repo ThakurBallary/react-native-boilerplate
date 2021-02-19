@@ -1,10 +1,10 @@
 import React from 'react';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-import {colors} from 'themes';
-import {icons} from 'assets';
-import screens, {HomeScreen, ProfileScreen} from 'screens';
+import { colors } from 'themes';
+import { icons } from 'assets';
+import screens, { HomeScreen, ProfileScreen } from 'screens';
 
 export type BottomTabParamList = {
   Home: undefined;
@@ -16,8 +16,8 @@ const Tab = createBottomTabNavigator<BottomTabParamList>();
 export default function MainStackNavigator() {
   return (
     <Tab.Navigator
-      screenOptions={({route}) => ({
-        tabBarIcon: ({focused, color, size}) => {
+      screenOptions={({ route }) => ({
+        tabBarIcon: ({ focused, color, size }) => {
           let iconName = focused ? icons.home : icons.homeOutline;
           if (route.name === screens.profile) {
             iconName = focused ? icons.person : icons.personOutline;
@@ -27,7 +27,8 @@ export default function MainStackNavigator() {
       })}
       tabBarOptions={{
         activeTintColor: colors.black,
-        inactiveTintColor: colors.darkGray,
+        inactiveTintColor: colors.black,
+        showLabel: false,
       }}>
       <Tab.Screen name="Home" component={HomeScreen} />
       <Tab.Screen name="Profile" component={ProfileScreen} />
