@@ -1,2 +1,2 @@
-export { default as authSelector } from './selectors';
-export { auth, setToken } from './slice';
+export { default as authSelector } from './selector';
+export * from './slice';

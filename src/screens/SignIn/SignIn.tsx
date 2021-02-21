@@ -1,9 +1,9 @@
 import React from 'react';
 import { View, Text } from 'react-native';
-import { useDispatch } from 'react-redux';
 import { StackNavigationProp } from '@react-navigation/stack';
 
 import { AuthStackParamList } from 'navigation/AuthStackNavigator';
+import { useAppDispatch } from 'hooks';
 import { setToken } from 'features/auth';
 import { styles } from 'themes';
 
@@ -14,7 +14,7 @@ type Props = {
 };
 
 export default function SignIn({ navigation }: Props) {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   function login() {
     dispatch(setToken('1'));

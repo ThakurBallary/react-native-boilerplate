@@ -4,9 +4,9 @@ export type AuthState = {
   token: string;
 };
 
-export const initialState = {
+export const initialState: AuthState = {
   token: '',
-} as AuthState;
+};
 
 const authSlice = createSlice({
   name: 'auth',

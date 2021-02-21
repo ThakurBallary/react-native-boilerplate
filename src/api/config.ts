@@ -1,10 +1,10 @@
-import axios from 'axios';
+import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
 import { BASE_URL } from '@env';
 
 axios.defaults.baseURL = BASE_URL;
 
 axios.interceptors.request.use(
-  function (config) {
+  function (config: AxiosRequestConfig) {
     return config;
   },
   function (error) {
@@ -13,7 +13,7 @@ axios.interceptors.request.use(
 );
 
 axios.interceptors.response.use(
-  function (response) {
+  function (response: AxiosResponse) {
     return response;
   },
   function (error) {
