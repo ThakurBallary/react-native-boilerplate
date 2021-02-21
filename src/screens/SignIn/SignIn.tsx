@@ -26,8 +26,8 @@ export default function SignIn({ navigation }: Props) {
 
   return (
     <View style={styles.flexCenter}>
-      <Text onPress={login}>SignIn Screen</Text>
-      <Text onPress={signup}>SignUp</Text>
+      <Text onPress={login}>Sign In</Text>
+      <Text onPress={signup}>Sign Up</Text>
     </View>
   );
 }

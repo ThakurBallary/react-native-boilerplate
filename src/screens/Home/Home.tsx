@@ -5,6 +5,8 @@ import { StackNavigationProp } from '@react-navigation/stack';
 import { MainStackParamList } from 'navigation/MainStackNavigator';
 import { styles } from 'themes';
 
+import { getUsers } from 'features/auth/apis';
+
 type HomeScreenNavigationProp = StackNavigationProp<MainStackParamList, 'Home'>;
 
 type Props = {
@@ -15,6 +17,7 @@ export default function Home({ navigation }: Props) {
   return (
     <View style={styles.flexCenter}>
       <Text>Home Screen</Text>
+      <Button onPress={getUsers} title="Get Users" />
       <Button
         onPress={() => navigation.navigate('Profile')}
         title="Open Profile"
