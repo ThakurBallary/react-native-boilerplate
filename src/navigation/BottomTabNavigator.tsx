@@ -1,8 +1,8 @@
 import React from 'react';
+import { useTheme } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-import { colors } from 'themes';
 import { icons } from 'assets';
 import screens, { HomeScreen, ProfileScreen } from 'screens';
 
@@ -14,6 +14,7 @@ export type BottomTabParamList = {
 const Tab = createBottomTabNavigator<BottomTabParamList>();
 
 export default function MainStackNavigator() {
+  const { colors } = useTheme();
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
@@ -26,8 +27,8 @@ export default function MainStackNavigator() {
         },
       })}
       tabBarOptions={{
-        activeTintColor: colors.black,
-        inactiveTintColor: colors.black,
+        activeTintColor: colors.text,
+        inactiveTintColor: colors.text,
         showLabel: false,
       }}>
       <Tab.Screen name="Home" component={HomeScreen} />

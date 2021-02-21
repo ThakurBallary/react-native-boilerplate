@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text } from 'react-native';
+import { useTheme } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 
 import { AuthStackParamList } from 'navigation/AuthStackNavigator';
@@ -14,6 +15,7 @@ type Props = {
 };
 
 export default function SignIn({ navigation }: Props) {
+  const { colors } = useTheme();
   const dispatch = useAppDispatch();
 
   function login() {
@@ -26,8 +28,8 @@ export default function SignIn({ navigation }: Props) {
 
   return (
     <View style={styles.flexCenter}>
-      <Text onPress={login}>Sign In</Text>
-      <Text onPress={signup}>Sign Up</Text>
+      <Text style={{ color: colors.text }} onPress={login}>Sign In</Text>
+      <Text style={{ color: colors.text }} onPress={signup}>Sign Up</Text>
     </View>
   );
 }

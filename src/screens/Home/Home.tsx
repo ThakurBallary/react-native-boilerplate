@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Button, View, Text } from 'react-native';
+import { useTheme } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 
 import { MainStackParamList } from 'navigation/MainStackNavigator';
@@ -14,6 +15,7 @@ type Props = {
 };
 
 export default function Home({ navigation }: Props) {
+  const { colors } = useTheme();
   const dispatch = useAppDispatch();
   const { isLoading, error, users } = useAppSelector(userSelector.users);
 
@@ -33,7 +35,7 @@ export default function Home({ navigation }: Props) {
 
   return (
     <View style={styles.flexCenter}>
-      <Text>Home Screen</Text>
+      <Text style={{ color: colors.text }}>Home Screen</Text>
       <Button
         onPress={() => navigation.navigate('Profile')}
         title="Open Profile"
