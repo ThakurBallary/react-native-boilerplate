@@ -2,21 +2,36 @@
 
 #### Get Started
 
-1. git clone https://github.com/ThakurBallary/react-native-boilerplate.git
-2. Change name in package.json
-3. cd [cloned folder]
+```
+git clone https://github.com/thakurballary/react-native-boilerplate.git 
 
-#### Install node_modules
+cd react-native-boilerplate
+```
 
-`yarn install`
+###### Note: Replace all "rnbpts" with your project name
+
+
+#### Install packages
+
+```
+yarn install
+```
+
 
 #### Run on Android
 
-`yarn android`
+```
+yarn android
+```
+
 
 #### Run on iOS
 
-1. cd ios
-2. pod install
+```
+cd ios 
 
-`yarn ios`
+pod install 
+
+yarn ios
+```
+
