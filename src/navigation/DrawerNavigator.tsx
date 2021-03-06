@@ -6,7 +6,7 @@ import {
   DrawerItem,
 } from '@react-navigation/drawer';
 
-import { BottomTabNavigator } from 'navigation';
+import BottomTabNavigator from 'navigation/BottomTabNavigator';
 import { store } from 'store/redux';
 import { setToken } from 'features/auth';
 

@@ -28,8 +28,12 @@ export default function SignIn({ navigation }: Props) {
 
   return (
     <View style={styles.flexCenter}>
-      <Text style={{ color: colors.text }} onPress={login}>Sign In</Text>
-      <Text style={{ color: colors.text }} onPress={signup}>Sign Up</Text>
+      <Text style={{ color: colors.text }} onPress={login}>
+        Sign In
+      </Text>
+      <Text style={{ color: colors.text }} onPress={signup}>
+        Sign Up
+      </Text>
     </View>
   );
 }
