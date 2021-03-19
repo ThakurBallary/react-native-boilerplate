@@ -10,8 +10,6 @@ cd react-native-boilerplate
 
 ###### Note: Replace all "rnbpts" with your project name
 
-###### Work in progress 
-
 #### Install packages
 
 ```
