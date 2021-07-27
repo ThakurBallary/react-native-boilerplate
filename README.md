@@ -13,7 +13,7 @@ cd react-native-boilerplate
 #### Install packages
 
 ```
-yarn
+yarn install
 ```
 or
 ```
