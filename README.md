@@ -1,5 +1,5 @@
 # React Native Boilerplate
-
+TDLR
 #### Get Started
 
 ```
